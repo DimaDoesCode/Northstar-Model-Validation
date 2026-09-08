@@ -1,0 +1,55 @@
+target:
+  name: "TARGET"
+
+  type: "binary"
+
+  positive_class:
+    value: 1
+    meaning: "Observed default / adverse outcome"
+
+  negative_class:
+    value: 0
+    meaning: "No observed default / adverse outcome"
+
+  unit_of_observation:
+    entity: "loan application"
+    identifier: "SK_ID_CURR"
+
+  prediction_object:
+    name: "default_probability"
+    interpretation: >
+      Estimated probability of the observed adverse outcome associated
+      with the loan application.
+
+  observation_horizon:
+    value: null
+    status: "not_specified_in_source_documentation"
+
+  regulatory_interpretation:
+    is_regulatory_pd: false
+    reason: >
+      The available public dataset documentation does not provide
+      sufficient information to establish a regulatory Probability
+      of Default definition or a specific 12-month observation horizon.
+
+  intended_use:
+    - "demonstration of independent ML model validation"
+    - "credit risk modelling methodology"
+    - "model risk assessment"
+
+  prohibited_interpretation:
+    - "regulatory capital PD"
+    - "12-month PD"
+    - "production credit decision without additional validation"
+
+  leakage_definition:
+    rule: >
+      Predictor variables must represent information reasonably
+      available at or before the loan application decision.
+
+  validation_requirements:
+    - "target distribution check"
+    - "target missingness check"
+    - "class definition check"
+    - "potential leakage assessment"
+    - "consistency with model documentation"

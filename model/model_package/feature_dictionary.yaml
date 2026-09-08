@@ -1,0 +1,128 @@
+version: "0.1"
+
+dataset:
+  name: "Home Credit Default Risk"
+  table: "application_train.csv"
+
+model:
+  name: "Northstar Retail Default Probability Model"
+  version: "0.1"
+
+features:
+
+  - name: "AMT_INCOME_TOTAL"
+    description: "Total income of the applicant"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "negative"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "AMT_CREDIT"
+    description: "Credit amount of the loan"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "positive"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "AMT_ANNUITY"
+    description: "Loan annuity"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "positive"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "AMT_GOODS_PRICE"
+    description: "Goods price for which the loan is given"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "positive"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "DAYS_BIRTH"
+    description: "Age of the applicant expressed in days"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "ambiguous"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "DAYS_EMPLOYED"
+    description: "Number of days employed before the application"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "negative"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+  - name: "CNT_CHILDREN"
+    description: "Number of children of the client"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "ambiguous"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "CNT_FAM_MEMBERS"
+    description: "Number of family members"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "ambiguous"
+    decision_time_available: true
+    leakage_risk: "low"
+
+  - name: "EXT_SOURCE_1"
+    description: "Normalized external data source score 1"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "negative"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+  - name: "EXT_SOURCE_2"
+    description: "Normalized external data source score 2"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "negative"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+  - name: "EXT_SOURCE_3"
+    description: "Normalized external data source score 3"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "negative"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+  - name: "CNT_CREDIT_PROLONG"
+    description: "Number of times the client's previous credits have been prolonged"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "positive"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+  - name: "AMT_REQ_CREDIT_BUREAU_YEAR"
+    description: "Number of enquiries to Credit Bureau about the client during the preceding year"
+    dtype: "numeric"
+    role: "predictor"
+    expected_direction: "positive"
+    decision_time_available: true
+    leakage_risk: "medium"
+
+
+target:
+
+  - name: "TARGET"
+    description: "Observed default/adverse outcome associated with the loan application"
+    dtype: "binary"
+    role: "target"
+    positive_class: 1
+    negative_class: 0
+    probability_name: "default_probability"
+    regulatory_pd: false
+    horizon: "not specified"
