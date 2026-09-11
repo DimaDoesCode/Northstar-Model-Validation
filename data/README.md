@@ -2,7 +2,7 @@
 
 ## 1. Dataset
 
-The V0.1 implementation uses the publicly available:
+The V1.0 implementation uses the publicly available:
 
 **Home Credit Default Risk**
 

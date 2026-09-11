@@ -1,0 +1,2 @@
+observations,defaults,non_defaults,default_rate,roc_auc,pr_auc,gini,ks,ks_threshold,risk_band_monotonicity,lowest_risk_band_default_rate,highest_risk_band_default_rate,risk_separation_ratio,highest_risk_band_default_capture
+61503,4965,56538,0.08072776937710356,0.7483098873479099,0.22791418637741237,0.49661977469581986,0.371547441450228,0.0837040059679998,1.0,0.014306616810274751,0.2622337831246952,18.329545454545457,0.32487411883182277

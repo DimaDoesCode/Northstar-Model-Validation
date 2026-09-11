@@ -1,0 +1,12 @@
+metric,value
+observations,61503.0
+observed_bad_rate,0.08072776937710356
+mean_predicted_probability,0.08042499650372284
+calibration_in_the_large,-0.0003027728733807217
+mean_absolute_calibration_error,0.002291807510393985
+maximum_absolute_calibration_error,0.00784431273565915
+weighted_calibration_error,0.00030277287338071766
+brier_score,0.06851822270049895
+log_loss,0.24919741634611423
+deciles_inside_95_ci,9.0
+deciles_outside_95_ci,1.0

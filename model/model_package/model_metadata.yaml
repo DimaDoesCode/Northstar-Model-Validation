@@ -1,0 +1,32 @@
+model:
+  name: "Northstar Retail Default Probability Model"
+  version: "1.0"
+  algorithm: "Logistic Regression"
+  random_state: 42
+  target: "TARGET"
+  id_column: "SK_ID_CURR"
+
+training:
+  validation_size: 0.20
+  split: "stratified"
+
+preprocessing:
+  numeric:
+    imputation: "median"
+    scaling: "standard"
+  categorical:
+    imputation: "most_frequent"
+    encoding: "one_hot"
+
+validation:
+  sample_size: 61503
+  roc_auc: 0.748310
+  pr_auc: 0.227914
+  gini: 0.496620
+  ks: 0.371547
+  brier: 0.068518
+  calibration_in_the_large: -0.000303
+
+status:
+  assessment: "ACCEPTABLE WITH MONITORING"
+  scope: "Northstar Model Validation V1.0"

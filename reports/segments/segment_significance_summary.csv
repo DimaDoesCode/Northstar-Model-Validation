@@ -1,0 +1,9 @@
+metric,value
+total_segments,20.0
+significant_negative,8.0
+significant_positive,1.0
+not_significant,11.0
+insufficient_data,0.0
+bootstrap_iterations,1000.0
+confidence_level,0.95
+random_state,42.0

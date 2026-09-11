@@ -1,0 +1,2 @@
+model,roc_auc,pr_auc,gini,ks,threshold,random_state,validation_size
+Logistic Regression,0.7483098873479099,0.22791418637741237,0.49661977469581986,0.371547441450228,0.5,42,0.2
